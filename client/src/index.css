@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Hanken Grotesk", Arial, sans-serif;
+  background-color: #262626;
+  color: #D9D9D9;
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+header {
+  text-align: center;
+}
+
+header>h1 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #F9F4DA;
+}
+
+header>p {
+  font-size: 0.875rem;
+  color: #8E8E8E;
+}
+
+.hangManContainer,
+.letterContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .3em;
+
+}
+
+.hangMan,
+.letter {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: .4rem;
+  color: white;
+  font-size: 1.2em;
+
+}
+
+.win,
+.lose {
+  border: 1px solid black;
+}
+
+.win {
+  background-color: green;
+}
+
+.lose {
+  background-color: red;
+  ;
+}
+
+.letter {
+  color: black;
+  background: white;
+}
+
+.letterContainer {
+  gap: .5em;
+  flex-direction: row;
+}
+
+section.game-status {
+  background-color: #10A95B;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #F9F4DA;
+  border-radius: 4px;
+  margin-block: 30px;
+}
+
+section.game-status>p {
+  margin: 5px;
+}
+
+section.game-status>h2 {
+  font-size: 1.25rem;
+  margin: 5px
+}
+
+section.word-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .2rem;
+  margin-bottom: 1.5rem;
+  
+}
+
+.word-container > span{
+  height: 2.5rem;
+  width: 2.5rem;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-bottom: 5px solid green;
+  
+}
+
+.word-container > span.letter{
+  /* border */
+}
+.revealed{
+  visibility: visible;
+}
+
+.hidden{
+  visibility: hidden;
+}
