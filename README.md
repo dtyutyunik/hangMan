@@ -54,9 +54,13 @@ Lazy-loads the `Confetti` component so it's only pulled in after a win — reduc
 - `random-words` for generating fresh word challenges
 
 ---
+🌐 **Live Demo** → [Play Now](https://hang-man-ooii.vercel.app)
+
 
 ## 📦 Installation
 
 ```bash
 npm install
 npm start
+
+
