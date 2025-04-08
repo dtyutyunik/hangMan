@@ -1,23 +1,14 @@
-import react, { useState } from 'react';
-import { hangmanWords } from '../hangmanWords';
+import React from "react";
 
-const Candidates = (props) => {
-
-    const [hangmanWordChoices, setHangmanWordChoices] = useState(hangmanWords)
-
-
-    const oneLessContender = (arr) => {
-        // hangmanWords.
-    }
-
+const Candidates = React.memo(({ hangmanWordChoices }) => {
     return (
         <div className="hangManContainer">
-            {hangmanWordChoices.map((i) => {
-                return <p className='hangMan'
-                    style={{ backgroundColor: i.active ? i.color : 'black' }} key={i.language}>{i.language.toUpperCase()}</p>
+            {hangmanWordChoices.map((i, index) => {
+                return <p style={i.active ? { backgroundColor: i.color } : {}} className={'hangMan'}
+                    key={i.language}><span className={i.active ? undefined : 'hung'}>{i.active ? i.language.toUpperCase() : '💀'}</span></p>
             })}
         </div >
     )
-}
+});
 
 export default Candidates;

@@ -4,8 +4,7 @@ const Header = () => {
             <header>
                 <h1>Hangman Coding</h1>
                 <p>Guess the word within 9 attempts to keep the
-                    programming world safe from Assembly!</p>
-
+                    programming world safe</p>
             </header>
         </main >
     )

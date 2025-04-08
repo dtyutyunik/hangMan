@@ -35,6 +35,7 @@ header>p {
   align-items: center;
   flex-wrap: wrap;
   gap: .3em;
+  max-width: 470px;
 
 }
 
@@ -47,6 +48,68 @@ header>p {
   font-size: 1.2em;
 
 }
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.4);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.hung {
+  position: relative;
+  background-color: black;
+  color: white;
+  animation: pulse 0.6s ease-in-out;
+}
+
+
+.guessingLetter {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  padding: .4rem;
+  font-size: 1.2em;
+}
+
+
+.letter {
+  color: black;
+  background-color: #FCBA29;
+}
+
+.letter {
+  cursor: pointer;
+}
+
+.letter.correct {
+  background-color: #10A95B;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.letter.wrong {
+  background-color: #EC5D49;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.disabledLetter {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+
 
 .win,
 .lose {
@@ -62,10 +125,7 @@ header>p {
   ;
 }
 
-.letter {
-  color: black;
-  background: white;
-}
+
 
 .letterContainer {
   gap: .5em;
@@ -73,7 +133,7 @@ header>p {
 }
 
 section.game-status {
-  background-color: #10A95B;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -91,32 +151,49 @@ section.game-status>h2 {
   margin: 5px
 }
 
-section.word-container{
+.gameStatus.win {
+  background-color: #10A95B;
+}
+
+.gameStatus.lose {
+  background-color: #EC5D49;
+}
+
+section.word-container {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: .2rem;
   margin-bottom: 1.5rem;
-  
 }
 
-.word-container > span{
+.word-container>span {
   height: 2.5rem;
   width: 2.5rem;
   justify-content: center;
   display: flex;
   align-items: center;
   border-bottom: 5px solid green;
-  
 }
 
-.word-container > span.letter{
-  /* border */
-}
-.revealed{
-  visibility: visible;
+
+.revealed {
+  display: inline-block;
 }
 
-.hidden{
-  visibility: hidden;
+.hidden {
+  display: none;
+}
+
+button.newGame {
+  margin-top: 2rem;
+  background-color: #11B5E5;
+  border: 1px solid #D7D7D7;
+  border-radius: 4px;
+  width: 225px;
+  height: 40px;
+  padding: 6px 12px;
+  display: block;
+  margin-inline: auto;
+  cursor: pointer;
 }
