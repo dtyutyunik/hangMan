@@ -2,7 +2,7 @@
 
 A fully interactive, letter-based Hangman game built with React, using modern optimization techniques like `React.memo`, `useMemo`, and `useCallback`. The game features randomized word generation, a shrinking list of "hanging candidates", and a celebratory confetti effect upon winning!
 
-![Win State Example](./src/winState.png)
+![Win State Example](../hangMan/client/src/winState.png)
 
 ---
 
